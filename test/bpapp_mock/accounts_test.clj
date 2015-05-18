@@ -5,7 +5,7 @@
             [io.pedestal.http :as bootstrap]
             [bpapp-mock.service :as service]
             [bpapp-mock.util :as u]
-            [bpapp-mock.test-utils :refer [json-body]]))
+            [bpapp-mock.test-utils :refer [json-body content-type]]))
 
 (def service
   (::bootstrap/service-fn (bootstrap/create-servlet service/service)))
@@ -27,7 +27,17 @@
        (json-body (response-for service :get "/accounts"))
        (:accounts rsc))))
 
-(deftest returns-200-status-for-specific-account-test
+(deftest returns-200-status-for-account-number-test
   (is (=
        (:status (response-for service :get "/accounts/1063365620"))
        200)))
+
+(deftest returns-json-content-type-for-account-number-test
+  (is (=
+       (content-type (response-for service :get "/accounts/1063365620"))
+       "application/json;charset=UTF-8")))
+
+(deftest returns-corresponding-response-body-for-account-number-test
+  (is (=
+       (json-body (response-for service :get "/accounts/1063365620"))
+       (:accounts-detail rsc))))
