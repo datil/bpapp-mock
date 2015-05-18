@@ -26,12 +26,14 @@
                       (body-params/default-parser-map
                         :json-options {:key-fn keyword}))
                      bootstrap/json-body]
-     ["/customers" {:get [:customers mock-response]}]
-     ["/detectid-images" {:get [:detectid-images mock-response]}]
      ["/accounts" {:get [:accounts mock-response]}
       ["/:account-id" {:get [:accounts-detail mock-response]}
        ["/transactions" {:get [:accounts-transactions
                                mock-response]}]]]
+     ["/credit-accounts" {:get [:credit-accounts mock-response]}]
+     ["/customers" {:get [:customers mock-response]}]
+     ["/debit-accounts" {:get [:debit-accounts mock-response]}]
+     ["/detectid-images" {:get [:detectid-images mock-response]}]
      ["/water-services" {:get [:water-services mock-response]}
       ["/:account-id" {:get [:water-services-account mock-response]
                        :post [:water-services-payment mock-response]}]]
