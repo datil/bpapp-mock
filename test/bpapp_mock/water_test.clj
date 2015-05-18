@@ -12,9 +12,23 @@
 
 (def rsc (u/load-resource "responses.edn"))
 
-;;; /water-services
+;;; GET /water-services
 
-(deftest returns-corresponding-response-body-for-water-services-test
+(deftest lists-water-services-accounts-test
   (is (=
        (json-body (response-for service :get "/water-services"))
        (:water-services rsc))))
+
+;;; GET /water-services/[:account-number]
+
+(deftest returns-water-service-account-data-test
+  (is (=
+       (json-body (response-for service :get "/water-services/1234"))
+       (:water-services-account rsc))))
+
+;;; POST /water-services/[:account-number]
+
+(deftest returns-water-service-payment-confirmation-test
+  (is (=
+       (json-body (response-for service :post "/water-services/1234"))
+       (:water-services-payment rsc))))

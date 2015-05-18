@@ -42,5 +42,10 @@
                                     :description "1347929 INTERAGUA ",
                                     :account-number "1347929",
                                     :type "03",
-                                    :id "41"
-                                    :supports-cc-payment true}]}}
+                                    :id "41"}]}
+ :water-services-account {:water-service {:payment-data "\tEMP\tINTERAGUA\tAU\tDN\tUSD\t0\t20130611\t20130731\t0\tMACIAS BRIONES TANIA FABIOLA\tEC\t01\t0000000\t0000000\t1347929\tI\t0919137141\t0\t0\t0\t0\t0\t\t\t0909",
+                                          :reference-number "0919137141",
+                                          :account-number "1347929",
+                                          :amount "0.00",
+                                          :customer-name "MACIAS BRIONES TANIA FABIOLA"
+                                          :supports-cc-payment true}}}
