@@ -1,6 +1,6 @@
 (defproject bpapp-mock "0.0.1-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Simulador del API de servicios financieros de Banco del Pacífico"
+  :url "http://github.com/datil/bpapp-mock"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]
@@ -22,4 +22,3 @@
                    :dependencies [[io.pedestal/pedestal.service-tools "0.4.0"]]}
              :uberjar {:aot [bpapp-mock.server]}}
   :main ^{:skip-aot true} bpapp-mock.server)
-
