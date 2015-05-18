@@ -37,7 +37,10 @@
                        :post [:water-services-payment mock-response]}]]
      ["/energy-services" {:get [:energy-services mock-response]}
       ["/:account-id" {:get [:energy-services-account mock-response]
-                       :post [:energy-services-payment mock-response]}]]]]])
+                       :post [:energy-services-payment mock-response]}]]
+     ["/telephone-services" {:get [:telephone-services mock-response]}
+      ["/:account-id" {:get [:telephone-services-account mock-response]
+                       :post [:telephone-services-payment mock-response]}]]]]])
 
 ;; Consumed by bpapp-mock.server/create-server
 ;; See bootstrap/default-interceptors for additional options you can configure

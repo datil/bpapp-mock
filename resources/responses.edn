@@ -63,4 +63,17 @@
                                             :customer-name "GARCES DEL POZO., ELENA E. ",
                                             :account-number "1131845"
                                             :supports-cc-payment true}}
- :energy-services-payment {:energy-payment "OK"}}
+ :energy-services-payment {:energy-payment "OK"}
+ :telephone-services {:telephone-services [{:max-amount " 4,999.00",
+                                            :company-id "101",
+                                            :customer-name "ORALIA CLEMENTINA BRIONES T",
+                                            :description "042100580 C.N.T. ",
+                                            :telephone-number "042100580",
+                                            :type "03",
+                                            :id "3"}]}
+ :telephone-services-account {:telephone-service {:payment-data "101042100580 \t7.49\t 00000000000000\t000010011719900\tP OJEDA MORENO WASHINGTON A\t2013-07-31\t2011\10",
+                                                  :amount "7.49",
+                                                  :date "2011/10",
+                                                  :customer-name "ORALIA CLEMENTINA BRIONES T",
+                                                  :telephone-number "042100580"
+                                                  :supports-cc-payment true}}}
