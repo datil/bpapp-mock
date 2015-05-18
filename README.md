@@ -28,6 +28,6 @@ Consiste en un servidor HTTP basado en [Pedestal](https://github.com/pedestal/pe
 * [bpapp-ios](https://bitbucket.org/datilmedia/bpapp-ios)
 * [bpapp-android](https://bitbucket.org/datilmedia/bpapp-ios)
 
-4. Nota de seguridad
+## Nota de seguridad
 
 Los datos incluídos en este programa son ficticios, únicamente para realizar pruebas en un ambiente de desarrollo. Nunca incluyas información bancaria personal o de terceros en este programa.
