@@ -25,7 +25,8 @@
      ^:interceptors [(body-params/body-params)
                      bootstrap/json-body]
      ["/customers" {:get [:customers mock-response]}]
-     ["/detectid-images" {:get [:detectid-images mock-response]}]]]])
+     ["/detectid-images" {:get [:detectid-images mock-response]}]
+     ["/accounts" {:get [:accounts mock-response]}]]]])
 
 ;; Consumed by bpapp-mock.server/create-server
 ;; See bootstrap/default-interceptors for additional options you can configure
