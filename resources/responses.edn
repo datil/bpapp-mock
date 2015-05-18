@@ -76,4 +76,5 @@
                                                   :date "2011/10",
                                                   :customer-name "ORALIA CLEMENTINA BRIONES T",
                                                   :telephone-number "042100580"
-                                                  :supports-cc-payment true}}}
+                                                  :supports-cc-payment true}}
+ :telephone-services-payment {:telephone-payment "OK"}}
