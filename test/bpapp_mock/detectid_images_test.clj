@@ -12,17 +12,7 @@
 
 (def rsc (u/load-resource "responses.edn"))
 
-(deftest returns-200-status-test
-  (is (=
-       (:status (response-for service :get "/detectid-images"))
-       200)))
-
-(deftest returns-json-content-type-test
-  (is (=
-       (get (:headers (response-for service :get "/detectid-images")) "Content-Type")
-       "application/json;charset=UTF-8")))
-
-(deftest returns-corresponding-response-body-test
+(deftest returns-a-detectid-record-test
   (is (=
        (json-body (response-for service :get "/detectid-images"))
        (:detectid-images rsc))))

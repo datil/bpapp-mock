@@ -14,21 +14,21 @@
 
 ;;; /accounts
 
-(deftest returns-corresponding-response-body-test
+(deftest returns-a-list-of-accounts-test
   (is (=
        (json-body (response-for service :get "/accounts"))
        (:accounts rsc))))
 
 ;;; /accounts/[account-id]
 
-(deftest returns-corresponding-response-body-for-account-number-test
+(deftest returns-account-details-test
   (is (=
        (json-body (response-for service :get "/accounts/1063365620"))
        (:accounts-detail rsc))))
 
 ;;; /accounts/[:account-id]/transactions
 
-(deftest returns-corresponding-response-body-for-account-transactions-test
+(deftest returns-a-list-of-transactions-for-an-account-test
   (is (=
        (json-body (response-for service :get "/accounts/12/transactions"))
        (:accounts-transactions rsc))))

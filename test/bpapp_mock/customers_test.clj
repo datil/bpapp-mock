@@ -14,7 +14,7 @@
 
 ;;; GET /customers
 
-(deftest returns-corresponding-response-body-test
+(deftest returns-a-customer-account-test
   (is (=
        (json-body (response-for service :get "/customers"))
        (:customers rsc))))
