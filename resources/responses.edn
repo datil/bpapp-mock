@@ -30,4 +30,17 @@
                               :officer-name "Cacique Pérez Marco Sucre",
                               :available-balance "475.96",
                               :accounting-balance "475.96",
-                              :pending-balance "0.00"}}}
+                             :pending-balance "0.00"}}
+ :accounts-transactions {:transactions
+                         [{:description "0119027014000       -201462231",
+                           :amount "76.20",
+                           :type "ND",
+                           :date "2014/01/14 16:53:55"}]}
+ :water-services {:water-services [{:max-amount " 4,999.00",
+                                    :company-id "909",
+                                    :customer-name "TANIA MACIAS",
+                                    :description "1347929 INTERAGUA ",
+                                    :account-number "1347929",
+                                    :type "03",
+                                    :id "41"
+                                    :supports-cc-payment true}]}}
