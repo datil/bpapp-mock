@@ -1,0 +1,17 @@
+{:customers {:customer {:visitor-id "30172100"
+                        :username "heisenberg"
+                        :customer-name "Heisenberg Martinez"
+                        :last-access "1/07/2013 1:56:08 PM"
+                        :contract-number "286998524537"
+                        :visit-number "1234567"
+                        :transaction-cost "0.35"
+                        :bpapp-session-token "0ea3fdb0-e8e5-11e3-8d99-b8e85646bf68"}}
+ :login-error {:code "900"
+               :message "Usuario o contraseña no válida."}
+ :session-error {:code 1111
+                 :message "Su sesión ha expirado, por favor ingrese nuevamente."}
+ :detectid-images {:detectid-image {:username "heisenberg"
+                                    :id "2233442"
+                                    :description "Breaking"
+                                    :uri "/public/images/pollos_hermanos.jpg"}}
+ }

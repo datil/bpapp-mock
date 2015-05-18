@@ -1,10 +1,11 @@
-(ns bpapp-mock.service-test
+(ns bpapp-mock.detectid-images-test
   (:require [cheshire.core :as json]
             [clojure.test :refer :all]
             [io.pedestal.test :refer :all]
             [io.pedestal.http :as bootstrap]
             [bpapp-mock.service :as service]
-            [bpapp-mock.util :as u]))
+            [bpapp-mock.util :as u]
+            [bpapp-mock.test-utils :refer [json-body]]))
 
 (def service
   (::bootstrap/service-fn (bootstrap/create-servlet service/service)))
@@ -13,15 +14,15 @@
 
 (deftest returns-200-status-test
   (is (=
-       (:status (response-for service :get "/customers"))
+       (:status (response-for service :get "/detectid-images"))
        200)))
 
 (deftest returns-json-content-type-test
   (is (=
-       (get (:headers (response-for service :get "/customers")) "Content-Type")
+       (get (:headers (response-for service :get "/detectid-images")) "Content-Type")
        "application/json;charset=UTF-8")))
 
 (deftest returns-corresponding-response-body-test
   (is (=
-       (json/parse-string (:body (response-for service :get "/customers")) true)
-       (:customers rsc))))
+       (json-body (response-for service :get "/detectid-images"))
+       (:detectid-images rsc))))
