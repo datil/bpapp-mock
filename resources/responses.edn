@@ -22,14 +22,14 @@
                        :number "1063365620",
                        :id "1"}}
  :accounts-detail {:account {:balance-date "2013/07/31",
-                              :balance-time "18:31:46",
-                              :customer-name "MARTINEZ HEISENBERG",
-                              :number "1063365620",
-                              :type "Cuenta de ahorros",
-                              :description "1063365620 Cuenta de ahorros",
-                              :officer-name "Cacique Pérez Marco Sucre",
-                              :available-balance "475.96",
-                              :accounting-balance "475.96",
+                             :balance-time "18:31:46",
+                             :customer-name "MARTINEZ HEISENBERG",
+                             :number "1063365620",
+                             :type "Cuenta de ahorros",
+                             :description "1063365620 Cuenta de ahorros",
+                             :officer-name "Cacique Pérez Marco Sucre",
+                             :available-balance "475.96",
+                             :accounting-balance "475.96",
                              :pending-balance "0.00"}}
  :accounts-transactions {:transactions
                          [{:description "0119027014000       -201462231",
@@ -48,4 +48,19 @@
                                           :account-number "1347929",
                                           :amount "0.00",
                                           :customer-name "MACIAS BRIONES TANIA FABIOLA"
-                                          :supports-cc-payment true}}}
+                                          :supports-cc-payment true}}
+ :water-services-payment {:water-payment "OK"}
+ :energy-services {:energy-services [{:max-amount " 4,999.00",
+                                      :company-id "201",
+                                      :customer-name "TANIA MACIAS BRIONES",
+                                      :description "1131845 ELECTRICA DE GUAYAQU",
+                                      :account-number "1131845",
+                                      :type "03",
+                                      :id "9"}]}
+ :energy-services-account {:energy-service {:payment-data "R0000915781355\tPUB\tEEE \tLU\tDN\tUSD\t10\t20130731\t00000000\t0100\tGARCES DEL POZO., ELENA E. \tEC\t \t0000000\t0000000\t1131845\t \t201001132010013100000000200053034089\t38.47\t0\t0\t0\t0\t\t\t201",
+                                            :amount "10.00",
+                                            :date "2010-01-13",
+                                            :customer-name "GARCES DEL POZO., ELENA E. ",
+                                            :account-number "1131845"
+                                            :supports-cc-payment true}}
+ :energy-services-payment {:energy-payment "OK"}}

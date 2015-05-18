@@ -22,17 +22,22 @@
 
 (defroutes routes
   [[["/" {:get home-page}
-     ^:interceptors [(body-params/body-params)
+     ^:interceptors [(body-params/body-params
+                      (body-params/default-parser-map
+                        :json-options {:key-fn keyword}))
                      bootstrap/json-body]
      ["/customers" {:get [:customers mock-response]}]
      ["/detectid-images" {:get [:detectid-images mock-response]}]
-     ["/accounts" {:get [:accounts mock-response]}]
-     ["/accounts/:account-id" {:get [:accounts-detail mock-response]}]
-     ["/accounts/:account-id/transactions" {:get [:accounts-transactions
-                                                  mock-response]}]
-     ["/water-services" {:get [:water-services mock-response]}]
-     ["/water-services/:account-id" {:get [:water-services-account mock-response]}]
-     ["/water-services/:account-id" {:post [:water-services-payment mock-response]}]]]])
+     ["/accounts" {:get [:accounts mock-response]}
+      ["/:account-id" {:get [:accounts-detail mock-response]}
+       ["/transactions" {:get [:accounts-transactions
+                               mock-response]}]]]
+     ["/water-services" {:get [:water-services mock-response]}
+      ["/:account-id" {:get [:water-services-account mock-response]
+                       :post [:water-services-payment mock-response]}]]
+     ["/energy-services" {:get [:energy-services mock-response]}
+      ["/:account-id" {:get [:energy-services-account mock-response]
+                       :post [:energy-services-payment mock-response]}]]]]])
 
 ;; Consumed by bpapp-mock.server/create-server
 ;; See bootstrap/default-interceptors for additional options you can configure

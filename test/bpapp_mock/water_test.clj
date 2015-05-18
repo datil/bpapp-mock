@@ -30,5 +30,8 @@
 
 (deftest returns-water-service-payment-confirmation-test
   (is (=
-       (json-body (response-for service :post "/water-services/1234"))
+       (json-body (response-for service
+                                :post "/water-services/1234"
+                                :headers {"Content-Type" "application/json"}
+                                :body (json/generate-string {:a :b})))
        (:water-services-payment rsc))))
