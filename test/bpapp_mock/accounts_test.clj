@@ -12,32 +12,23 @@
 
 (def rsc (u/load-resource "responses.edn"))
 
-(deftest returns-200-status-test
-  (is (=
-       (:status (response-for service :get "/accounts"))
-       200)))
-
-(deftest returns-json-content-type-test
-  (is (=
-       (get (:headers (response-for service :get "/accounts")) "Content-Type")
-       "application/json;charset=UTF-8")))
+;;; /accounts
 
 (deftest returns-corresponding-response-body-test
   (is (=
        (json-body (response-for service :get "/accounts"))
        (:accounts rsc))))
 
-(deftest returns-200-status-for-account-number-test
-  (is (=
-       (:status (response-for service :get "/accounts/1063365620"))
-       200)))
-
-(deftest returns-json-content-type-for-account-number-test
-  (is (=
-       (content-type (response-for service :get "/accounts/1063365620"))
-       "application/json;charset=UTF-8")))
+;;; /accounts/[account-id]
 
 (deftest returns-corresponding-response-body-for-account-number-test
   (is (=
        (json-body (response-for service :get "/accounts/1063365620"))
        (:accounts-detail rsc))))
+
+;;; /accounts/[:account-id]/transactions
+
+(deftest returns-corresponding-response-body-for-account-transactions-test
+  (is (=
+       (json-body (response-for service :get "/accounts/12/transactions"))
+       (:accounts-transactions rsc))))
