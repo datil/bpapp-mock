@@ -84,19 +84,25 @@
                                     :type "10",
                                     :type-label "Cuenta de Ahorros"
                                     :customer-name "AVILES CHAVEZ ROSA",
-                                    :max-amount "4,999.00"
-                                    }]}
+                                    :max-amount "4,999.00"}
+                                   {:description "Visa 4324XXXXXXXX1207"
+                                    :id "167"
+                                    :number "4324XXXXXXXX1207"
+                                    :type "1"
+                                    :type-label "Visa"
+                                    :customer-name "MARTINEZ HEISENBERG"
+                                    :max-amount ""}]}
  :credit-accounts {:credit-accounts [{:description "1064385205 Mi Cuenta EMELEC ",
                                       :id "1",
                                       :number "1064385205",
                                       :type "10",
                                       :type-label "Cta. Ahorros",
-                                      :customer-name "AVILES CHAVEZ ROSA",
+                                      :customer-name "MARTINEZ HEISENBERG",
                                       :max-amount " 4,999.00"},
                                      {:description "0013459856 Cta. Corriente ",
                                       :id "68",
                                       :number "0013459856",
                                       :type "00",
                                       :type-label "Cta. Corriente",
-                                      :customer-name "TERAN ORTIZ MADELEINE DIOSA",
+                                      :customer-name "MARTINEZ HEISENBERG",
                                       :max-amount " 4,999.00"}]}}
