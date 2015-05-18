@@ -20,4 +20,14 @@
                        :accounting-balance "475.96",
                        :customer-name "MARTINEZ HEISENBERG",
                        :number "1063365620",
-                       :id "1"}}}
+                       :id "1"}}
+ :accounts-detail {:account {:balance-date "2013/07/31",
+                              :balance-time "18:31:46",
+                              :customer-name "MARTINEZ HEISENBERG",
+                              :number "1063365620",
+                              :type "Cuenta de ahorros",
+                              :description "1063365620 Cuenta de ahorros",
+                              :officer-name "Cacique Pérez Marco Sucre",
+                              :available-balance "475.96",
+                              :accounting-balance "475.96",
+                              :pending-balance "0.00"}}}

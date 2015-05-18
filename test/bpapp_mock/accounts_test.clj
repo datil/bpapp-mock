@@ -26,3 +26,8 @@
   (is (=
        (json-body (response-for service :get "/accounts"))
        (:accounts rsc))))
+
+(deftest returns-200-status-for-specific-account-test
+  (is (=
+       (:status (response-for service :get "/accounts/1063365620"))
+       200)))
