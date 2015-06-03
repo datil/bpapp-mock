@@ -15,7 +15,8 @@
                                     :description "Breaking"
                                     :uri "/public/images/pollos_hermanos.jpg"}}
  :accounts {:accounts [{:description "1063365620 Cta. Ahorros",
-                        :type "Cta. Ahorros",
+                        :type-label "Cta. Ahorros",
+                        :type "10",
                         :available-balance "475.96",
                         :accounting-balance "475.96",
                         :customer-name "MARTINEZ HEISENBERG",
