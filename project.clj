@@ -1,4 +1,4 @@
-(defproject bpapp-mock "0.0.1-SNAPSHOT"
+(defproject bpapp-mock "0.1.0"
   :description "Simulador del API de servicios financieros de Banco del Pacífico"
   :url "http://github.com/datil/bpapp-mock"
   :license {:name "Eclipse Public License"
