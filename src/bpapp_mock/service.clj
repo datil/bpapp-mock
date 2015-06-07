@@ -33,6 +33,7 @@
      ["/credit-accounts" {:get [:credit-accounts mock-response]}]
      ["/customers" {:get [:customers mock-response]}]
      ["/debit-accounts" {:get [:debit-accounts mock-response]}]
+     ["/debit-credit-cards" {:get [:debit-credit-cards mock-response]}]
      ["/detectid-images" {:get [:detectid-images mock-response]}]
      ["/water-services" {:get [:water-services mock-response]}
       ["/:account-id" {:get [:water-services-account mock-response]
