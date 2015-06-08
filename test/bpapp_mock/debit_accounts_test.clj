@@ -17,4 +17,25 @@
 (deftest returns-debit-accounts-test
   (is (=
        (json-body (response-for service :get "/debit-accounts"))
-       (:debit-accounts rsc))))
+       (:default (:debit-accounts rsc)))))
+
+;;; /debit-accounts?type=10
+
+(deftest filters-savings-account-type-test
+  (is (=
+       (json-body (response-for service :get "/debit-accounts?type=10"))
+       (:10 (:type (:debit-accounts rsc))))))
+
+;;; /debit-accounts?type=1
+
+(deftest filters-credit-cards-type-test
+  (is (=
+       (json-body (response-for service :get "/debit-accounts?type=1"))
+       (:1 (:type (:debit-accounts rsc))))))
+
+;;; /debit-accounts?type=1
+
+(deftest filters-checking-cards-type-test
+  (is (=
+       (json-body (response-for service :get "/debit-accounts?type=11"))
+       (:11 (:type (:debit-accounts rsc))))))

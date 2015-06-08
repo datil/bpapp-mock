@@ -79,21 +79,34 @@
                                                   :telephone-number "042100580"
                                                   :supports-cc-payment true}}
  :telephone-services-payment {:telephone-payment "OK"}
- :debit-accounts {:debit-accounts [{:description "1012345678 Cuenta Ahorros",
-                                    :id "1",
-                                    :number "1064385205",
-                                    :type "10",
-                                    :type-label "Cuenta de Ahorros"
-                                    :customer-name "AVILES CHAVEZ ROSA",
-                                    :max-amount "4,999.00"}]}
- :debit-credit-cards {:debit-credit-cards [{:description "Visa 4324XXXXXXXX1207"
-                                            :id "167"
-                                            :number "4324XXXXXXXX1207"
-                                            :type "1"
-                                            :type-label "Visa"
-                                            :customer-name "MARTINEZ HEISENBERG"
-                                            :max-amount ""}]}
-
+ :debit-accounts {:default [{:description "1012345678 Cuenta Ahorros",
+                             :id "32",
+                             :number "1064385205",
+                             :type "10",
+                             :type-label "Cuenta de Ahorros"
+                             :customer-name "AVILES CHAVEZ ROSA",
+                             :max-amount "4,999.00"}]
+                  :type {:10 [{:description "1012345678 Cuenta Ahorros",
+                               :id "89",
+                               :number "1064385205",
+                               :type "10",
+                               :type-label "Cuenta de Ahorros"
+                               :customer-name "AVILES CHAVEZ ROSA",
+                               :max-amount "4,999.00"}]
+                         :11 [{:description "1112325878 Cuenta Corriente",
+                               :id "22",
+                               :number "1112325878",
+                               :type "10",
+                               :type-label "Cuenta Corriente"
+                               :customer-name "AVILES CHAVEZ ROSA",
+                               :max-amount "4,999.00"}]
+                         :1 [{:description "Visa 4324XXXXXXXX1207"
+                              :id "167"
+                              :number "4324XXXXXXXX1207"
+                              :type "1"
+                              :type-label "Visa"
+                              :customer-name "MARTINEZ HEISENBERG"
+                              :max-amount ""}]}}
  :credit-accounts {:credit-accounts [{:description "1064385205 Mi Cuenta EMELEC ",
                                       :id "1",
                                       :number "1064385205",
