@@ -17,4 +17,4 @@
 (deftest returns-credit-accounts-test
   (is (=
        (json-body (response-for service :get "/credit-accounts"))
-       (:credit-accounts rsc))))
+       (:default (:credit-accounts rsc)))))

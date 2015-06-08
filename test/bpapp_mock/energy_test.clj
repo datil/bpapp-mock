@@ -17,14 +17,14 @@
 (deftest lists-energy-service-accounts-test
   (is (=
        (json-body (response-for service :get "/energy-services"))
-       (:energy-services rsc))))
+       (:default (:energy-services rsc)))))
 
 ;;; GET /energy-services/[account-number]
 
 (deftest returns-energy-service-account-data-test
   (is (=
        (json-body (response-for service :get "/energy-services/12345"))
-       (:energy-services-account rsc))))
+       (:default (:energy-services-account rsc)))))
 
 ;;; POST /energy-services/[account-number]
 
@@ -34,4 +34,4 @@
                                 :post "/energy-services/12345"
                                 :headers {"Content-Type" "application/json"}
                                 :body (json/generate-string {:test :data})))
-       (:energy-services-payment rsc))))
+       (:default (:energy-services-payment rsc)))))
