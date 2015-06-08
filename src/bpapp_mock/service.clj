@@ -16,9 +16,18 @@
 (defbefore mock-response
   [context]
   (let [request (:request context)
-        response (ring-resp/response
-                  (get rsc (:route-name (:route context))))]
-    (assoc context :response response)))
+        qs (:query-params request)
+        qs-filter (first qs)
+        resp (get rsc (:route-name (:route context)))
+        resp-content (get
+                      (get
+                       resp
+                       (first qs-filter))
+                      (keyword (second qs-filter)))
+        mock-resp (if (= resp-content nil)
+                    (:default resp)
+                    resp-content)]
+    (assoc context :response (ring-resp/response mock-resp))))
 
 (defroutes routes
   [[["/" {:get home-page}
