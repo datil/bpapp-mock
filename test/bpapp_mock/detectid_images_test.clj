@@ -15,4 +15,4 @@
 (deftest returns-a-detectid-record-test
   (is (=
        (json-body (response-for service :get "/detectid-images"))
-       (:detectid-images rsc))))
+       (:default (:detectid-images rsc)))))

@@ -17,18 +17,18 @@
 (deftest returns-a-list-of-accounts-test
   (is (=
        (json-body (response-for service :get "/accounts"))
-       (:accounts rsc))))
+       (:default (:accounts rsc)))))
 
 ;;; /accounts/[account-id]
 
 (deftest returns-account-details-test
   (is (=
        (json-body (response-for service :get "/accounts/1063365620"))
-       (:accounts-detail rsc))))
+       (:default (:accounts-detail rsc)))))
 
 ;;; /accounts/[:account-id]/transactions
 
 (deftest returns-a-list-of-transactions-for-an-account-test
   (is (=
        (json-body (response-for service :get "/accounts/12/transactions"))
-       (:accounts-transactions rsc))))
+       (:default (:accounts-transactions rsc)))))

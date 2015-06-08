@@ -1,28 +1,28 @@
-{:customers {:customer {:visitor-id "30172100"
-                        :username "heisenberg"
-                        :customer-name "Heisenberg Martinez"
-                        :last-access "1/07/2013 1:56:08 PM"
-                        :contract-number "286998524537"
-                        :visit-number "1234567"
-                        :transaction-cost "0.35"
-                        :bpapp-session-token "0ea3fdb0-e8e5-11e3-8d99-b8e85646bf68"}}
+{:customers {:default {:visitor-id "30172100"
+                       :username "heisenberg"
+                       :customer-name "Heisenberg Martinez"
+                       :last-access "1/07/2013 1:56:08 PM"
+                       :contract-number "286998524537"
+                       :visit-number "1234567"
+                       :transaction-cost "0.35"
+                       :bpapp-session-token "0ea3fdb0-e8e5-11e3-8d99-b8e85646bf68"}}
  :login-error {:code "900"
                :message "Usuario o contraseña no válida."}
  :session-error {:code 1111
                  :message "Su sesión ha expirado, por favor ingrese nuevamente."}
- :detectid-images {:detectid-image {:username "heisenberg"
-                                    :id "2233442"
-                                    :description "Breaking"
-                                    :uri "/public/images/pollos_hermanos.jpg"}}
- :accounts {:accounts [{:description "1063365620 Cta. Ahorros",
-                        :type-label "Cta. Ahorros",
-                        :type "10",
-                        :available-balance "475.96",
-                        :accounting-balance "475.96",
-                        :customer-name "MARTINEZ HEISENBERG",
-                        :number "1063365620",
-                        :id "1"}]}
- :accounts-detail {:account {:balance-date "2013/07/31",
+ :detectid-images {:default {:username "heisenberg"
+                             :id "2233442"
+                             :description "Breaking"
+                             :uri "/public/images/pollos_hermanos.jpg"}}
+ :accounts {:default [{:description "1063365620 Cta. Ahorros",
+                       :type-label "Cta. Ahorros",
+                       :type "10",
+                       :available-balance "475.96",
+                       :accounting-balance "475.96",
+                       :customer-name "MARTINEZ HEISENBERG",
+                       :number "1063365620",
+                       :id "1"}]}
+ :accounts-detail {:default {:balance-date "2013/07/31",
                              :balance-time "18:31:46",
                              :customer-name "MARTINEZ HEISENBERG",
                              :number "1063365620",
@@ -32,53 +32,53 @@
                              :available-balance "475.96",
                              :accounting-balance "475.96",
                              :pending-balance "0.00"}}
- :accounts-transactions {:transactions
+ :accounts-transactions {:default
                          [{:description "0119027014000       -201462231",
                            :amount "76.20",
                            :type "ND",
                            :date "2014/01/14 16:53:55"}]}
- :water-services {:water-services [{:max-amount " 4,999.00",
-                                    :company-id "909",
-                                    :customer-name "TANIA MACIAS",
-                                    :description "1347929 INTERAGUA ",
+ :water-services {:default [{:max-amount " 4,999.00",
+                             :company-id "909",
+                             :customer-name "TANIA MACIAS",
+                             :description "1347929 INTERAGUA ",
+                             :account-number "1347929",
+                             :type "03",
+                             :id "41"}]}
+ :water-services-account {:default {:payment-data "\tEMP\tINTERAGUA\tAU\tDN\tUSD\t0\t20130611\t20130731\t0\tMACIAS BRIONES TANIA FABIOLA\tEC\t01\t0000000\t0000000\t1347929\tI\t0919137141\t0\t0\t0\t0\t0\t\t\t0909",
+                                    :reference-number "0919137141",
                                     :account-number "1347929",
-                                    :type "03",
-                                    :id "41"}]}
- :water-services-account {:water-service {:payment-data "\tEMP\tINTERAGUA\tAU\tDN\tUSD\t0\t20130611\t20130731\t0\tMACIAS BRIONES TANIA FABIOLA\tEC\t01\t0000000\t0000000\t1347929\tI\t0919137141\t0\t0\t0\t0\t0\t\t\t0909",
-                                          :reference-number "0919137141",
-                                          :account-number "1347929",
-                                          :amount "0.00",
-                                          :customer-name "MACIAS BRIONES TANIA FABIOLA"
-                                          :supports-cc-payment true}}
- :water-services-payment {:water-payment "OK"}
- :energy-services {:energy-services [{:max-amount " 4,999.00",
-                                      :company-id "201",
-                                      :customer-name "TANIA MACIAS BRIONES",
-                                      :description "1131845 ELECTRICA DE GUAYAQU",
-                                      :account-number "1131845",
-                                      :type "03",
-                                      :id "9"}]}
- :energy-services-account {:energy-service {:payment-data "R0000915781355\tPUB\tEEE \tLU\tDN\tUSD\t10\t20130731\t00000000\t0100\tGARCES DEL POZO., ELENA E. \tEC\t \t0000000\t0000000\t1131845\t \t201001132010013100000000200053034089\t38.47\t0\t0\t0\t0\t\t\t201",
-                                            :amount "10.00",
-                                            :date "2010-01-13",
-                                            :customer-name "GARCES DEL POZO., ELENA E. ",
-                                            :account-number "1131845"
-                                            :supports-cc-payment true}}
- :energy-services-payment {:energy-payment "OK"}
- :telephone-services {:telephone-services [{:max-amount " 4,999.00",
-                                            :company-id "101",
-                                            :customer-name "ORALIA CLEMENTINA BRIONES T",
-                                            :description "042100580 C.N.T. ",
-                                            :telephone-number "042100580",
-                                            :type "03",
-                                            :id "3"}]}
- :telephone-services-account {:telephone-service {:payment-data "101042100580 \t7.49\t 00000000000000\t000010011719900\tP OJEDA MORENO WASHINGTON A\t2013-07-31\t2011\10",
-                                                  :amount "7.49",
-                                                  :date "2011/10",
-                                                  :customer-name "ORALIA CLEMENTINA BRIONES T",
-                                                  :telephone-number "042100580"
-                                                  :supports-cc-payment true}}
- :telephone-services-payment {:telephone-payment "OK"}
+                                    :amount "0.00",
+                                    :customer-name "MACIAS BRIONES TANIA FABIOLA"
+                                    :supports-cc-payment true}}
+ :water-services-payment {:default {:water-payment "OK"}}
+ :energy-services {:default [{:max-amount " 4,999.00",
+                              :company-id "201",
+                              :customer-name "TANIA MACIAS BRIONES",
+                              :description "1131845 ELECTRICA DE GUAYAQU",
+                              :account-number "1131845",
+                              :type "03",
+                              :id "9"}]}
+ :energy-services-account {:default {:payment-data "R0000915781355\tPUB\tEEE \tLU\tDN\tUSD\t10\t20130731\t00000000\t0100\tGARCES DEL POZO., ELENA E. \tEC\t \t0000000\t0000000\t1131845\t \t201001132010013100000000200053034089\t38.47\t0\t0\t0\t0\t\t\t201",
+                                     :amount "10.00",
+                                     :date "2010-01-13",
+                                     :customer-name "GARCES DEL POZO., ELENA E. ",
+                                     :account-number "1131845"
+                                     :supports-cc-payment true}}
+ :energy-services-payment {:default {:energy-payment "OK"}}
+ :telephone-services {:default [{:max-amount " 4,999.00",
+                                 :company-id "101",
+                                 :customer-name "ORALIA CLEMENTINA BRIONES T",
+                                 :description "042100580 C.N.T. ",
+                                 :telephone-number "042100580",
+                                 :type "03",
+                                 :id "3"}]}
+ :telephone-services-account {:default {:payment-data "101042100580 \t7.49\t 00000000000000\t000010011719900\tP OJEDA MORENO WASHINGTON A\t2013-07-31\t2011\10",
+                                        :amount "7.49",
+                                        :date "2011/10",
+                                        :customer-name "ORALIA CLEMENTINA BRIONES T",
+                                        :telephone-number "042100580"
+                                        :supports-cc-payment true}}
+ :telephone-services-payment {:default {:telephone-payment "OK"}}
  :debit-accounts {:default [{:description "1012345678 Cuenta Ahorros",
                              :id "32",
                              :number "1064385205",
@@ -107,17 +107,17 @@
                               :type-label "Visa"
                               :customer-name "MARTINEZ HEISENBERG"
                               :max-amount ""}]}}
- :credit-accounts {:credit-accounts [{:description "1064385205 Mi Cuenta EMELEC ",
-                                      :id "1",
-                                      :number "1064385205",
-                                      :type "10",
-                                      :type-label "Cta. Ahorros",
-                                      :customer-name "MARTINEZ HEISENBERG",
-                                      :max-amount " 4,999.00"},
-                                     {:description "0013459856 Cta. Corriente ",
-                                      :id "68",
-                                      :number "0013459856",
-                                      :type "00",
-                                      :type-label "Cta. Corriente",
-                                      :customer-name "MARTINEZ HEISENBERG",
-                                      :max-amount " 4,999.00"}]}}
+ :credit-accounts {:default [{:description "1064385205 Mi Cuenta EMELEC ",
+                              :id "1",
+                              :number "1064385205",
+                              :type "10",
+                              :type-label "Cta. Ahorros",
+                              :customer-name "MARTINEZ HEISENBERG",
+                              :max-amount " 4,999.00"},
+                             {:description "0013459856 Cta. Corriente ",
+                              :id "68",
+                              :number "0013459856",
+                              :type "00",
+                              :type-label "Cta. Corriente",
+                              :customer-name "MARTINEZ HEISENBERG",
+                              :max-amount " 4,999.00"}]}}

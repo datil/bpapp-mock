@@ -17,4 +17,4 @@
 (deftest returns-a-customer-account-test
   (is (=
        (json-body (response-for service :get "/customers"))
-       (:customers rsc))))
+       (:default (:customers rsc)))))

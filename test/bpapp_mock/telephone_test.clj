@@ -17,14 +17,14 @@
 (deftest lists-telephone-services-accounts-test
   (is (=
        (json-body (response-for service :get "/telephone-services"))
-       (:telephone-services rsc))))
+       (:default (:telephone-services rsc)))))
 
 ;;; GET /telephone-services/[:account-number]
 
 (deftest returns-telephone-service-account-data-test
   (is (=
        (json-body (response-for service :get "/telephone-services/1234"))
-       (:telephone-services-account rsc))))
+       (:default (:telephone-services-account rsc)))))
 
 ;;; POST /telephone-services/[:account-number]
 
@@ -34,4 +34,4 @@
                                 :post "/telephone-services/1234"
                                 :headers {"Content-Type" "application/json"}
                                 :body (json/generate-string {:a :b})))
-       (:telephone-services-payment rsc))))
+       (:default (:telephone-services-payment rsc)))))
